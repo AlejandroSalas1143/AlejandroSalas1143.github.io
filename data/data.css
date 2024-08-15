@@ -1,3 +1,7 @@
+.no-transition * {
+    transition: none !important;
+}
+
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -64,12 +68,48 @@ nav ul li a.active:hover {
     border-radius: 5px;
 }
 
-#theme-toggle:hover {
-    background-color: #555;
+/* Estilo del botón de interruptor */
+#theme-toggle {
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-left: 20px;
 }
+/* Estilo del deslizador */
+#theme-toggle .slider {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(2px);
+}
+
+/* Estado cuando está en modo oscuro */
+body.dark-mode #theme-toggle {
+    background-color: #444;
+}
+
+body.dark-mode #theme-toggle .slider {
+    transform: translateX(26px);
+}
+
 
 main {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 section {
@@ -79,6 +119,7 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     transition: background-color 0.3s, box-shadow 0.3s;
+    width: 80%;
 }
 
 section h2, section h3 {

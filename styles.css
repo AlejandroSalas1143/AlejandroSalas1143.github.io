@@ -1,3 +1,7 @@
+.no-transition * {
+    transition: none !important;
+}
+
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -55,22 +59,51 @@ nav ul li a.active:hover {
     box-shadow: none; /* Opcional: Elimina el box-shadow en el estado activo */
 }
 
+
+/* Estilo del botón de interruptor */
 #theme-toggle {
-    padding: 5px 10px;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    position: relative;
     cursor: pointer;
-    background-color: #444;
-    color: white;
     border: none;
-    border-radius: 5px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-left: 20px;
 }
 
-#theme-toggle:hover {
-    background-color: #555;
+/* Estilo del deslizador */
+#theme-toggle .slider {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(2px);
 }
+
+/* Estado cuando está en modo oscuro */
+body.dark-mode #theme-toggle {
+    background-color: #444;
+}
+
+body.dark-mode #theme-toggle .slider {
+    transform: translateX(26px);
+}
+
 
 /* Main Content Styles */
 main {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 section {
@@ -79,6 +112,7 @@ section {
     padding: 20px;
     margin-bottom: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
+    width: 80%;
 }
 
 section:hover {
@@ -215,7 +249,7 @@ footer img {
 }
 
 .dark-mode section h2::after {
-    background: #e0e0e0;
+    background: #007BFF;
 }
 
 .dark-mode section p {
