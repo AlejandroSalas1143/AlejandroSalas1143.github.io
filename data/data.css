@@ -56,7 +56,17 @@ nav ul li a.active {
 
 nav ul li a.active:hover {
     color: #0056b3;
-    box-shadow: none; /* Opcional: Elimina el box-shadow en el estado activo */
+    box-shadow: none;
+    /* Opcional: Elimina el box-shadow en el estado activo */
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
 }
 
 #theme-toggle {
@@ -83,6 +93,7 @@ nav ul li a.active:hover {
     padding: 0;
     margin-left: 20px;
 }
+
 /* Estilo del deslizador */
 #theme-toggle .slider {
     width: 20px;
@@ -122,7 +133,8 @@ section {
     width: 80%;
 }
 
-section h2, section h3 {
+section h2,
+section h3 {
     margin: 0;
     padding-bottom: 10px;
     border-bottom: 2px solid #007BFF;
@@ -144,12 +156,14 @@ section h3 {
     color: #333;
 }
 
-section p {
+section p,
+section ul {
     font-size: 16px;
     line-height: 1.6;
     color: #555;
 }
 
+/* Footer Styles */
 footer {
     background-color: #333;
     color: white;
@@ -175,7 +189,8 @@ footer img {
     color: white;
 }
 
-.dark-mode header, .dark-mode footer {
+.dark-mode header,
+.dark-mode footer {
     background-color: #1e1e1e;
 }
 
@@ -184,11 +199,13 @@ footer img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.dark-mode section h2, .dark-mode section h3 {
+.dark-mode section h2,
+.dark-mode section h3 {
     color: #ddd;
 }
 
-.dark-mode section p {
+.dark-mode section p,
+.dark-mode section ul {
     color: #ccc;
 }
 
@@ -210,4 +227,7 @@ footer img {
 
 .dark-mode #theme-toggle:hover {
     background-color: #666;
+}
+.dark-mode a {
+    color: #53a6ff;
 }
