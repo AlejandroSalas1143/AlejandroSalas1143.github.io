@@ -57,7 +57,6 @@ nav ul li a.active {
 nav ul li a.active:hover {
     color: #0056b3;
     box-shadow: none;
-    /* Opcional: Elimina el box-shadow en el estado activo */
 }
 
 a {
@@ -78,7 +77,6 @@ section a:hover {
     border-radius: 5px;
 }
 
-/* Estilo del botón de interruptor */
 #theme-toggle {
     width: 50px;
     height: 25px;
