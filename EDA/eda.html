@@ -25,9 +25,167 @@
 
     </header>
     <main>
-        <section class="coming-soon">
-            <h2>Coming Soon</h2>
-            <p>This section will be available later. Stay tuned!</p>
+        <section>
+            <div class="container">
+                <h1>Exploratory Data Analysis</h1>
+                <h2>Data Overview</h2>
+                <p>This report provides a detailed summary of the dataset, which contains information on health
+                    indicators and the condition of diabetes in a population. This initial analysis offers an overview
+                    of the data structure, volume, and the nature of the variables.</p>
+
+                <h3>Number of Observations and Variables</h3>
+                <p>The dataset contains a total of <strong>253,680 observations</strong> and includes <strong>22
+                        variables</strong> that represent different health indicators or demographic characteristics
+                    relevant to diabetes analysis.</p>
+
+                <h2 class="section-title">Present Variables and data type</h2>
+                <table>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Type</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Diabetes_binary</td>
+                        <td>Target</td>
+                        <td>Binary</td>
+                        <td>0 = no diabetes, 1 = prediabetes or diabetes</td>
+                    </tr>
+                    <tr>
+                        <td>HighBP</td>
+                        <td>Feature</td>
+                        <td>Binary</td>
+                        <td>0 = no high BP, 1 = high BP</td>
+                    </tr>
+                    <tr>
+                        <td>HighChol</td>
+                        <td>Feature</td>
+                        <td>Binary</td>
+                        <td>0 = no high cholesterol, 1 = high cholesterol</td>
+                    </tr>
+                    <tr>
+                        <td>CholCheck</td>
+                        <td>Feature</td>
+                        <td>Binary</td>
+                        <td>0 = no cholesterol check in 5 years, 1 = yes cholesterol check in 5 years</td>
+                    </tr>
+                    <tr>
+                        <td>BMI</td>
+                        <td>Feature</td>
+                        <td>Integer</td>
+                        <td>Body Mass Index</td>
+                    </tr>
+                    <tr>
+                        <td>Smoker</td>
+                        <td>Feature</td>
+                        <td>Binary</td>
+                        <td>Have you smoked at least 100 cigarettes in your life? 0 = no, 1 = yes</td>
+                    </tr>
+                    <tr>
+                        <td>Stroke</td>
+                        <td>Feature</td>
+                        <td>Binary</td>
+                        <td>Ever told you had a stroke. 0 = no, 1 = yes</td>
+                    </tr>
+                    <tr>
+                        <td>HeartDiseaseorAttack</td>
+                        <td>Feature</td>
+                        <td>Binary</td>
+                        <td>Coronary heart disease (CHD) or myocardial infarction (MI) 0 = no, 1 = yes</td>
+                    </tr>
+                    <tr>
+                        <td>PhysActivity</td>
+                        <td>Feature</td>
+                        <td>Binary</td>
+                        <td>Physical activity in the past 30 days (excluding job) 0 = no, 1 = yes</td>
+                    </tr>
+                    <tr>
+                        <td>Fruits</td>
+                        <td>Feature</td>
+                        <td>Binary</td>
+                        <td>Consume fruit 1 or more times per day. 0 = no, 1 = yes</td>
+                    </tr>
+                    <tr>
+                        <td>Veggies</td>
+                        <td>Feature</td>
+                        <td>Binary</td>
+                        <td>Consume vegetables 1 or more times per day. 0 = no, 1 = yes</td>
+                    </tr>
+                    <tr>
+                        <td>HvyAlcoholConsump</td>
+                        <td>Feature</td>
+                        <td>Binary</td>
+                        <td>Heavy drinkers (men &gt; 14 drinks/week, women &gt; 7 drinks/week). 0 = no, 1 = yes</td>
+                    </tr>
+                    <tr>
+                        <td>AnyHealthcare</td>
+                        <td>Feature</td>
+                        <td>Binary</td>
+                        <td>Have any healthcare coverage. 0 = no, 1 = yes</td>
+                    </tr>
+                    <tr>
+                        <td>NoDocbcCost</td>
+                        <td>Feature</td>
+                        <td>Binary</td>
+                        <td>Did not see a doctor due to cost in the past 12 months. 0 = no, 1 = yes</td>
+                    </tr>
+                    <tr>
+                        <td>GenHlth</td>
+                        <td>Feature</td>
+                        <td>Integer</td>
+                        <td>General health self-assessment scale 1-5 (1 = excellent, 5 = poor)</td>
+                    </tr>
+                    <tr>
+                        <td>MentHlth</td>
+                        <td>Feature</td>
+                        <td>Integer</td>
+                        <td>Days of poor mental health in the last 30 days (scale 1-30)</td>
+                    </tr>
+                    <tr>
+                        <td>PhysHlth</td>
+                        <td>Feature</td>
+                        <td>Integer</td>
+                        <td>Days of poor physical health in the last 30 days (scale 1-30)</td>
+                    </tr>
+                    <tr>
+                        <td>DiffWalk</td>
+                        <td>Feature</td>
+                        <td>Binary</td>
+                        <td>Serious difficulty walking or climbing stairs. 0 = no, 1 = yes</td>
+                    </tr>
+                    <tr>
+                        <td>Sex</td>
+                        <td>Feature</td>
+                        <td>Binary</td>
+                        <td>0 = female, 1 = male</td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td>Feature</td>
+                        <td>Integer</td>
+                        <td>13-level age category (1 = 18-24, 13 = 80 or older)</td>
+                    </tr>
+                    <tr>
+                        <td>Education</td>
+                        <td>Feature</td>
+                        <td>Integer</td>
+                        <td>Education level (scale 1-6, 1 = no school, 6 = college graduate)</td>
+                    </tr>
+                    <tr>
+                        <td>Income</td>
+                        <td>Feature</td>
+                        <td>Integer</td>
+                        <td>Income level (scale 1-8, 1 = less than 10,000, 8 = 75,000 or more)</td>
+                    </tr>
+                </table>
+
+                <h2>Conclusion</h2>
+                <p>This dataset provides a solid foundation for analyzing the relationship between various health
+                    factors and diabetes. With a large number of observations and key variables, it is suitable for
+                    performing statistical analyses or applying machine learning methods to study the incidence of
+                    diabetes in the population.</p>
+            </div>
         </section>
     </main>
     <footer>
