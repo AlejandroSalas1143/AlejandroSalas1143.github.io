@@ -146,7 +146,9 @@ th {
     background-color: #0e4c8e;
     color: white;
 }
-
+td {
+    color: black;
+}
 .coming-soon {
     display: flex;
     flex-direction: column;
@@ -194,15 +196,25 @@ footer img {
     color: white;
 }
 
-.dark-mode header, .dark-mode footer {
+.dark-mode header,
+.dark-mode footer {
     background-color: #1e1e1e;
 }
 
-.dark-mode .coming-soon h2 {
-    color: #00aaff;
+.dark-mode section {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.dark-mode .coming-soon p {
+.dark-mode section h1,
+.dark-mode section h2,
+.dark-mode section h3 {
+    color: #ddd;
+}
+
+.dark-mode section p,
+.dark-mode section ul,
+.dark-mode section ol {
     color: #ccc;
 }
 
@@ -224,4 +236,7 @@ footer img {
 
 .dark-mode #theme-toggle:hover {
     background-color: #666;
+}
+.dark-mode a {
+    color: #53a6ff;
 }
